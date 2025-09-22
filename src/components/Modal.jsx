@@ -41,19 +41,19 @@ export default function Modal({ open, toggleModal, modalData }){
                 </p>
 
                 <div className='flex'>
-                    <Label >Atomic Mass: {atomic_mass}</Label>
-                    <Label >Appearance: {appearance}</Label>
+                    <Label >Masa Atomica: {atomic_mass}</Label>
+                    <Label >Apariencia: {appearance}</Label>
                 </div>
                 <div className='flex'>
-                    <Label >Category: {category}</Label>
-                    <Label >Group: {group}</Label>
+                    <Label >Categoría: {category}</Label>
+                    <Label >Grupo: {group}</Label>
                 </div>
             
             </div>
           
             <div className={`flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600 ${fontColor} `}>
                  
-               Source:  <a href={source} className='pl-2 underline' target='_blank'>{source}</a>
+               Fuente:  <a href={source} className='pl-2 underline' target='_blank'>{source}</a>
             </div>
         </div>
     </div>

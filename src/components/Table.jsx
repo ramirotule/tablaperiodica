@@ -62,10 +62,10 @@ export default function Table(){
             <h2 className={`md:hidden py-2 text-${groupColor} font-semibold`}>Group Seven</h2>
             <SeventhhRow data={data.elements} />
 
-            <h2 className={`md:hidden py-2 text-${groupColor} font-semibold`}>Lanthanides</h2>
+            <h2 className={`md:hidden py-2 text-${groupColor} font-semibold`}>Lantánidos</h2>
             <Lanthanides data={data.elements} />
             
-            <h2 className={`md:hidden py-2 text-${groupColor} font-semibold`}>Actinides</h2>
+            <h2 className={`md:hidden py-2 text-${groupColor} font-semibold`}>Actínidos</h2>
             <Actinides data={data.elements} />
 
         </div>
