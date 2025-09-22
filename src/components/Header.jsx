@@ -71,7 +71,7 @@ useEffect(() => {
     return (
         <div className={ isDarkMode? `bg-slate-700 border-b border-slate-400`: `bg-slate-100 border-b border-slate-200` }>
                 <div className="flex items-center py-4 px-4">
-                <img src="src\assets\logo.png" alt="logo" width="80" height="80" className="h-12"/>
+                <img src="/logo.png" alt="logo" width="80" height="80" className="h-12"/>
                 <h1 className={`text-2xl font-bold ${fontColor} ml-10`}>Tabla Periodica de los Elementos</h1>
                     <div className="flex items-center ml-auto space-x-4 relative">
                         <div className="relative">
