@@ -4,8 +4,8 @@ export default function Actinides({ data }){
     return(
         <div className="">
 
-            <div className="flex">
-                <div className="md:w-1/2 w-full md:grid md:grid-cols-9">
+            <div className="flex flex-col md:flex-row">
+                <div className="w-full md:w-1/2 grid grid-cols-3 md:grid-cols-9 gap-1">
                     
                     <Element />
                     <Element  />
@@ -18,7 +18,7 @@ export default function Actinides({ data }){
                     <Element elementData={data[94]} />
 
                 </div>
-                <div className="md:w-1/2 w-full md:grid md:grid-cols-9">
+                <div className="w-full md:w-1/2 grid grid-cols-3 md:grid-cols-9 gap-1">
                     <Element elementData={data[95]} />
                     <Element elementData={data[96]} />
                     <Element elementData={data[97]} />

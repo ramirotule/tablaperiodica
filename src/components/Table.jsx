@@ -32,7 +32,7 @@ export default function Table(){
 
     return(
         <ModalContext.Provider value={toggleModal}>
-        <div className="py-4 px-4">
+        <div className="py-2 md:py-4 px-2 md:px-4">
             <Modal 
             open={open}
             toggleModal={toggleModal}
@@ -41,31 +41,31 @@ export default function Table(){
 
           
 
-            <h2 className={`md:hidden py-2 text-${groupColor} font-semibold`}>Group One</h2>
+            <h2 className={`md:hidden py-2 text-lg font-semibold`} style={{color: groupColor}}>Periodo 1</h2>
             <FirstRow data={data.elements} />
 
-            <h2 className={`md:hidden py-2 text-${groupColor} font-semibold`}>Group Two</h2>
+            <h2 className={`md:hidden py-2 text-lg font-semibold`} style={{color: groupColor}}>Periodo 2</h2>
             <SecondRow data={data.elements} />
 
-            <h2 className={`md:hidden py-2 text-${groupColor} font-semibold`}>Group Three</h2>
+            <h2 className={`md:hidden py-2 text-lg font-semibold`} style={{color: groupColor}}>Periodo 3</h2>
             <ThirdRow data={data.elements} />
 
-            <h2 className={`md:hidden py-2 text-${groupColor} font-semibold`}>Group Four</h2>
+            <h2 className={`md:hidden py-2 text-lg font-semibold`} style={{color: groupColor}}>Periodo 4</h2>
             <FourthRow data={data.elements} />
 
-            <h2 className={`md:hidden py-2 text-${groupColor} font-semibold`}>Group Five</h2>
+            <h2 className={`md:hidden py-2 text-lg font-semibold`} style={{color: groupColor}}>Periodo 5</h2>
             <FifthRow  data={data.elements} />
 
-            <h2 className={`md:hidden py-2 text-${groupColor} font-semibold`}>Group Six</h2>
+            <h2 className={`md:hidden py-2 text-lg font-semibold`} style={{color: groupColor}}>Periodo 6</h2>
             <SixthRow data={data.elements} />
 
-            <h2 className={`md:hidden py-2 text-${groupColor} font-semibold`}>Group Seven</h2>
+            <h2 className={`md:hidden py-2 text-lg font-semibold`} style={{color: groupColor}}>Periodo 7</h2>
             <SeventhhRow data={data.elements} />
 
-            <h2 className={`md:hidden py-2 text-${groupColor} font-semibold`}>Lantánidos</h2>
+            <h2 className={`md:hidden py-2 text-lg font-semibold`} style={{color: groupColor}}>Lantánidos</h2>
             <Lanthanides data={data.elements} />
             
-            <h2 className={`md:hidden py-2 text-${groupColor} font-semibold`}>Actínidos</h2>
+            <h2 className={`md:hidden py-2 text-lg font-semibold`} style={{color: groupColor}}>Actínidos</h2>
             <Actinides data={data.elements} />
 
         </div>

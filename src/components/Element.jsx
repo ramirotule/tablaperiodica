@@ -70,16 +70,16 @@ export default function Element({ elementData, series, from }){
 
 
 
-            {from && <div className={`border ${darkModeBorder} py-6 m-0`}> 
-                    <h1 className="font-bold text-white" >{from} </h1>
+            {from && <div className={`border ${darkModeBorder} py-3 md:py-6 m-0`}> 
+                    <h1 className="font-bold text-white text-sm md:text-base" >{from} </h1>
                     <p className="text-xs tracking-tighter text-white">{series}</p>
                 
                 </div>}    
 
-                {elementData && <div className={`border  ${darkModeBorder} py-4 m-0`}> 
+                {elementData && <div className={`border  ${darkModeBorder} py-2 md:py-4 m-0 min-h-[60px] md:min-h-[80px]`}> 
                     <p className={`text-xs text-white`}>{elementData.number}</p>
-                    <h1 className="font-bold text-white" >{elementData.symbol} </h1>
-                    <p className="text-xs tracking-tighter text-white">{elementData.name}</p>
+                    <h1 className="font-bold text-white text-sm md:text-base" >{elementData.symbol} </h1>
+                    <p className="text-xs tracking-tighter text-white truncate">{elementData.name}</p>
                 
                 </div>}
         </div>

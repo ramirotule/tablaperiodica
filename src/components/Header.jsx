@@ -70,11 +70,13 @@ useEffect(() => {
 
     return (
         <div className={ isDarkMode? `bg-slate-700 border-b border-slate-400`: `bg-slate-100 border-b border-slate-200` }>
-                <div className="flex items-center py-4 px-4">
-                <img src="/logo.png" alt="logo" width="80" height="80" className="h-12"/>
-                <h1 className={`text-2xl font-bold ${fontColor} ml-10`}>Tabla Periodica de los Elementos</h1>
-                    <div className="flex items-center ml-auto space-x-4 relative">
-                        <div className="relative">
+                <div className="flex flex-col md:flex-row md:items-center py-4 px-4 space-y-4 md:space-y-0">
+                <div className="flex items-center">
+                    <img src="/logo.png" alt="logo" width="80" height="80" className="h-10 md:h-12"/>
+                    <h1 className={`text-lg md:text-2xl font-bold ${fontColor} ml-4 md:ml-10`}>Tabla Periódica</h1>
+                </div>
+                    <div className="flex items-center md:ml-auto space-x-2 md:space-x-4 relative w-full md:w-auto">
+                        <div className="relative flex-1 md:flex-none">
                             <input 
                                 type="search" 
                                 placeholder="Buscar elemento..." 
@@ -82,15 +84,15 @@ useEffect(() => {
                                 onChange={handleInputChange}
                                 onKeyPress={handleKeyPress}
                                 onClick={(e) => e.stopPropagation()}
-                                className={`border ${isDarkMode ? "border-slate-600 bg-slate-600 text-white" : "border-slate-300"} rounded-md py-2 px-4 w-64`}  
+                                className={`border ${isDarkMode ? "border-slate-600 bg-slate-600 text-white" : "border-slate-300"} rounded-md py-2 px-3 md:px-4 w-full md:w-64 text-sm md:text-base`}  
                             />
                             {showSuggestions && (
-                                <div className={`absolute top-full left-0 right-0 mt-1 ${isDarkMode ? "bg-slate-700 border-slate-600" : "bg-white border-slate-300"} border rounded-md shadow-lg z-50 max-h-60 overflow-y-auto`}>
+                                <div className={`absolute top-full left-0 right-0 mt-1 ${isDarkMode ? "bg-slate-700 border-slate-600" : "bg-white border-slate-300"} border rounded-md shadow-lg z-50 max-h-40 md:max-h-60 overflow-y-auto`}>
                                     {searchResults.slice(0, 5).map((element) => (
                                         <div
                                             key={element.number}
                                             onClick={() => handleSelectElement(element)}
-                                            className={`px-4 py-2 cursor-pointer ${isDarkMode ? "hover:bg-slate-600 text-white" : "hover:bg-gray-100"} border-b last:border-b-0`}
+                                            className={`px-3 md:px-4 py-2 cursor-pointer ${isDarkMode ? "hover:bg-slate-600 text-white" : "hover:bg-gray-100"} border-b last:border-b-0 text-sm md:text-base`}
                                         >
                                             <span className="font-bold">{element.symbol}</span> - {element.name} (#{element.number})
                                         </div>
@@ -98,12 +100,12 @@ useEffect(() => {
                                 </div>
                             )}
                         </div>
-                    <span className="cursor-pointer">
+                    <span className="cursor-pointer flex-shrink-0">
                     <DarkModeSwitch
                         // style={{ marginBottom: '2rem' }}
                         checked={isDarkMode}
                         onChange={toggleDarkMode}
-                        size={30}
+                        size={24}
                         />
                     </span>
                     
